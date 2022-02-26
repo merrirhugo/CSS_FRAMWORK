@@ -1,0 +1,21 @@
+.img-responsive {
+    max-width: 100%;
+    height: auto;
+}
+
+.img-rounded {
+    border-radius: 0.25rem !important;
+}
+
+.img-circle {
+    height: 400px !important;
+    width: 400px !important;
+    border-radius: 50% !important;
+    object-fit: cover;
+}
+
+.img-thumbnail {
+    padding: 0.25rem;
+    border: 2px solid #dee2e6;
+    border-radius: 0.25rem !important;
+}

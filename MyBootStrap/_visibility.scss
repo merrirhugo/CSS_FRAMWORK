@@ -1,0 +1,52 @@
+@include xs {
+        .visible-xs {
+            visibility: visible;
+        }
+        .hidden-xs {
+            visibility: hidden;
+        }
+}
+@include sm {
+        .visible-sm {
+            visibility: visible;
+        }
+        .hidden-sm {
+            visibility: hidden;
+        }
+}
+@include md {
+        .visible-md {
+            visibility: visible;
+        }
+        .hidden-md {
+            visibility: hidden;
+        }
+}
+@include lg {
+        .visible-lg {
+            visibility: visible;
+        }
+        .hidden-lg {
+            visibility: hidden;
+        }
+}
+@include xl {
+        .visible-xl {
+            visibility: visible;
+        }
+        .hidden-xl {
+            visibility: hidden;
+        }
+}
+
+@media print
+{    
+    .hidden-print
+    {
+        display: none !important;
+    }
+    .visible-print
+    {
+        display: block !important;
+    }
+}

@@ -1,0 +1,53 @@
+@use 'sass:math';
+
+@mixin button($bg-color: #e2e2e2) {
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-flex;
+    border: 0;
+    padding: $base-padding $base-padding * 2;
+    border-radius: $base-border-radius;
+    background-color: $bg-color;
+}
+
+.btn {
+    @include button;
+}
+
+@each $key, $val in $colors {
+    @for $i from 1 through 9 {
+    .btn-#{$key}-size-#{$i} {
+        @include button($val);
+        height: 49px * math.div($i, 3);
+        width: 114px * math.div($i, 2);
+        align-items: center;
+        justify-content: center;
+        &:hover {
+            background-color: lighten($val, 5);
+        }
+    }
+    .btn-outlined-#{$key}-size-#{$i} {
+        @include button(#fff);
+        border: $base-border-thickness solid $val;
+        height: 49px * math.div($i, 3);
+        width: 114px * math.div($i, 2);
+        align-items: center;
+        justify-content: center;
+        &:hover {
+            background-color: $val;
+        }
+    }
+    .btn-complement-#{$key}-size-#{$i} {
+        @include button($val);
+        color: light-comp($val);
+        height: 49px * math.div($i, 3);
+        width: 114px * math.div($i, 2);
+        align-items: center;
+        justify-content: center;
+        &:hover {
+            color: $val;
+            background-color: light-comp($val);
+        }
+    }
+}
+}
